@@ -1,0 +1,30 @@
+.today-celebration { position: relative; isolation: isolate; overflow: hidden; border: 1px solid color-mix(in srgb, var(--rose) 22%, var(--border)); border-radius: 24px; margin: 6px 0 22px; background: linear-gradient(125deg, #fff, var(--accent-soft)); box-shadow: 0 8px 26px color-mix(in srgb, var(--rose) 5%, transparent); }
+.celebration-card { display: grid; grid-template-columns: 132px minmax(0, 1fr); min-height: 226px; }
+.celebration-photo { position: relative; min-height: 100%; overflow: hidden; }
+.celebration-photo .date-photo { border-radius: 0; min-height: 226px; background: linear-gradient(150deg, var(--accent-soft), var(--rose2)); color: var(--rose); }
+.celebration-photo .date-photo img { object-fit: cover; }
+.celebration-photo-heart { position: absolute; inset-inline-start: 14px; bottom: 14px; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 11px; background: #ffffffed; color: var(--rose); }
+.celebration-copy { position: relative; z-index: 1; padding: 23px 20px; min-width: 0; align-self: center; }
+.celebration-eyebrow { display: flex; align-items: center; gap: 7px; color: var(--rose); font-size: 10px; font-weight: 700; letter-spacing: .08em; }
+.today-celebration h2 { font-family: inherit; font-size: 21px; font-weight: 650; line-height: 1.45; margin: 9px 0 8px; overflow-wrap: anywhere; }
+.celebration-years { color: var(--plum2); font-size: 13px; line-height: 1.75; margin: 0 0 6px; }
+.celebration-day { display: block; color: var(--muted); font-size: 11px; line-height: 1.7; }
+.celebration-message { display: inline-flex; align-items: center; justify-content: center; gap: 7px; color: #fff; background: var(--rose); padding: 10px 12px; min-height: 44px; border-radius: 12px; text-decoration: none; font-size: 12px; font-weight: 600; line-height: 1.6; margin-top: 16px; max-width: 100%; }
+.celebration-message svg { flex-shrink: 0; }
+.celebration-switcher { display: flex; align-items: center; justify-content: space-between; gap: 8px; border-top: 1px solid color-mix(in srgb, var(--rose) 15%, var(--border)); padding: 4px 12px; }
+.celebration-switcher p { color: var(--muted); font-size: 11px; margin: 0; }
+.celebration-switcher > div { display: flex; align-items: center; gap: 5px; }
+.celebration-switcher span { color: var(--plum2); font-size: 10px; min-width: 72px; text-align: center; }
+.celebration-switcher button { display: grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 12px; color: var(--rose); background: transparent; }
+.celebration-switcher button:hover { background: #fff8; }
+html[lang="ar"] .celebration-eyebrow { letter-spacing: 0; font-size: 12px; }
+html[dir="rtl"] .celebration-switcher button svg { transform: scaleX(-1); }
+.celebration-hearts { position: absolute; inset: 0; z-index: 2; pointer-events: none; overflow: hidden; }
+.celebration-heart { position: absolute; bottom: -24px; color: var(--rose); opacity: 0; animation: celebration-rise 2.8s ease-out 1 both; }
+.celebration-heart-0 { left: 5%; }.celebration-heart-1 { left: 14%; animation-delay: .15s; }.celebration-heart-2 { left: 24%; animation-delay: .3s; }.celebration-heart-3 { left: 33%; animation-delay: .05s; }.celebration-heart-4 { left: 42%; animation-delay: .45s; }.celebration-heart-5 { left: 52%; animation-delay: .2s; }.celebration-heart-6 { left: 62%; animation-delay: .6s; }.celebration-heart-7 { left: 72%; animation-delay: .25s; }.celebration-heart-8 { left: 82%; animation-delay: .4s; }.celebration-heart-9 { left: 93%; animation-delay: .1s; }
+@keyframes celebration-rise { 12% { opacity: .45; } 70% { opacity: .3; } to { transform: translate3d(12px, -290px, 0) rotate(16deg); opacity: 0; } }
+@media (max-width: 380px) { .celebration-card { grid-template-columns: 94px minmax(0, 1fr); }.celebration-copy { padding: 18px 14px; }.today-celebration h2 { font-size: 18px; }.celebration-years { font-size: 12px; }.celebration-switcher { padding-inline: 8px; }.celebration-switcher p { max-width: 90px; }.celebration-message { padding-inline: 9px; } }
+@media (min-width: 920px) { .celebration-card { grid-template-columns: 190px minmax(0, 1fr); min-height: 226px; }.celebration-copy { padding: 26px 30px; }.today-celebration h2 { font-size: 26px; } }
+@media (prefers-reduced-motion: reduce) { .celebration-hearts { display: none; }.celebration-heart { animation: none; } }
+:root[data-reduce-motion="true"] .celebration-hearts { display: none; }
+:root[data-reduce-motion="true"] .celebration-heart { animation: none; }

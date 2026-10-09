@@ -1,0 +1,45 @@
+# Dependencies and build output
+node_modules/
+.next/
+out/
+dist/
+coverage/
+*.tsbuildinfo
+next-env.d.ts
+
+# Local credentials: the empty template is the only exception
+.env*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+service-account*.json
+
+# Provider/account links and local tools
+.vercel/
+.supabase/
+supabase/.temp/
+.openai/
+.codex/
+.idea/
+.vscode/
+
+# Private exports, uploads, databases, screenshots and archives
+uploads/
+exports/
+backups/
+screenshots/
+*.zip
+*.sql.gz
+*.dump
+*.sqlite*
+*.db
+*.har
+
+# Machine files and logs
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*

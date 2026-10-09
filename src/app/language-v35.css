@@ -1,0 +1,28 @@
+/* Script-native Arabic typography; no network font and no mirrored media. */
+html[lang="ar"] body{font-family:"SF Arabic","Geeza Pro","Noto Naskh Arabic",Tahoma,system-ui,sans-serif;line-height:1.65}
+html[lang="ar"] :is(h1,h2,h3,.page-title,.mini-title,.brand-title,.experience-page-heading h1,.modal h2,.contact-name){font-family:inherit;letter-spacing:0;line-height:1.5}
+html[lang="ar"] :is(.eyebrow,.settings-section-label,.chat-tools-eyebrow,.brand-sub,.rail-brand small){letter-spacing:0;font-size:12px;line-height:1.7;text-transform:none}
+html[lang="ar"] .experience-page-heading h1{font-size:clamp(30px,7vw,48px);font-weight:650}
+html[lang="ar"] :is(.settings-row h3,.experience-section-heading h2){font-size:19px;line-height:1.65}
+html[dir="rtl"] :is(.settings-button,.next-moment-card,.album-empty-card,.calls-start){text-align:start}
+html[dir="rtl"] :is(.settings-row .grow,.contact-copy,.conversation-hero-link){min-width:0;text-align:start}
+html[dir="rtl"] :is(.conversation-hero-bottom>svg,.experience-section-heading a>svg,.settings-row>svg,.chat-back>svg,.next-moment-card>svg,.album-empty-card>svg){transform:scaleX(-1)}
+html[dir="rtl"] :is(.contact-actions,.chat-contact-actions){margin-left:0;margin-inline-start:auto}
+html[dir="rtl"] .reply-snapshot{border-left:0;border-inline-start:3px solid var(--rose2)}
+html[dir="rtl"] .toggle{direction:ltr}
+html[dir="rtl"] .bubble-row{direction:ltr}
+html[dir="rtl"] :is(.bubble-text,.message-text,.rich-message-text){unicode-bidi:plaintext;text-align:start}
+html[dir="rtl"] :is(.bubble-meta,.voice,.voice-bubble,.wave,.chat-media-stage,.profile-photo-stage,.video-call-fullscreen,.video-call-stage,.voice-call-mini){direction:ltr}
+html[dir="rtl"] :is(.fullscreen-call-header h2,.fullscreen-call-header p,.fullscreen-camera-placeholder,.video-call-controls button,.video-call-settings){direction:rtl}
+html[dir="rtl"] input:is([type="email"],[type="url"],[type="date"],[type="datetime-local"],[type="password"],[inputmode="numeric"]){direction:ltr;text-align:start}
+html[dir="rtl"] :is(.story-card-copy strong,.days,.voice-call-status,.voice-mini-dot,.recording-time){font-variant-numeric:tabular-nums}
+html[lang="ar"] .nav-item{font-size:11px;letter-spacing:0;line-height:1.5}
+.language-setting{display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px}
+.language-setting .language-options{grid-column:1/-1}
+.language-options{display:grid;grid-template-columns:1fr 1fr;gap:5px;padding:5px;border:1px solid var(--border);border-radius:16px;background:var(--cream);min-width:0}
+.language-options button{min-height:44px;border:0;border-radius:11px;background:transparent;color:var(--ink);font-size:15px;font-weight:650;cursor:pointer}
+.language-options button[aria-pressed="true"]{background:var(--plum);color:#fff;box-shadow:0 3px 9px #4a234618}
+.language-options button:focus-visible{outline:3px solid var(--rose);outline-offset:2px}
+.language-compact{max-width:240px;margin:0 auto 18px}
+.call-message-copy>span,.call-message-copy time{color:#62576b}
+@media(max-width:380px){html[lang="ar"] .settings-row{gap:9px}html[lang="ar"] .swatches{gap:4px}html[lang="ar"] .swatch{width:23px;height:23px}html[lang="ar"] .chat-head-action{width:32px!important;min-width:32px!important}html[lang="ar"] .experience-section-heading h2{font-size:17px}}

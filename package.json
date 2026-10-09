@@ -1,0 +1,37 @@
+{
+  "name": "together-private-couple-pwa",
+  "version": "3.6.5",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "next typegen && tsc --noEmit",
+    "project-check": "node scripts/check-project.mjs",
+    "clean:legacy": "node scripts/cleanup-legacy.mjs",
+    "deploy": "npm run check && npm run build && vercel --prod --yes",
+    "deploy:check": "npm run check && npm run build",
+    "check": "npm run project-check && npm run typecheck && npm test",
+    "test": "node --test tests/*.test.cjs",
+    "smoke:http": "node scripts/smoke-http.mjs",
+    "privacy:check": "node scripts/check-public-privacy.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.74.0",
+    "lucide-react": "^0.468.0",
+    "next": "16.3.8",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "web-push": "^3.6.7"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.5.8",
+    "@tailwindcss/postcss": "^4.1.0",
+    "@types/node": "^22.15.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@types/web-push": "^3.6.4",
+    "tailwindcss": "^4.1.0",
+    "typescript": "^5.9.0"
+  }
+}

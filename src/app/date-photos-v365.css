@@ -1,0 +1,47 @@
+/* Private date photos: subtle cards, an uncropped viewport-sized viewer. */
+.dates-v36 .timeline-date-card{border-color:#e5dce5;background:linear-gradient(115deg,#fff,#fdfafb);box-shadow:0 5px 20px #38213805}
+.dates-v36 .date-card-photo{position:relative;box-shadow:inset 0 0 0 1px #82556f12;transition:box-shadow .16s ease}
+.dates-v36 .date-card-photo.has-photo:hover{box-shadow:0 4px 14px #38213814}
+.date-photo-expand{position:absolute;inset-inline-end:5px;bottom:5px;width:24px;height:24px;display:grid;place-items:center;border-radius:8px;background:#211523cc;color:#fff;border:1px solid #ffffff50;pointer-events:none}
+.dates-v36 .date-card-copy h3 button{white-space:normal;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-height:1.45;overflow-wrap:anywhere;text-overflow:ellipsis}
+.dates-v36 .date-card-copy time{display:block;font-variant-numeric:tabular-nums}
+.dates-v36 .special-date-actions button{border:1px solid transparent}
+.dates-v36 .special-date-actions button:hover{border-color:#eadce6;background:#f4eaf1}
+.date-detail-photo{display:block;position:relative;width:100%;padding:0;margin:0 0 20px;border:1px solid var(--border);background:#f6f1f5;border-radius:17px;overflow:hidden;cursor:zoom-in}
+.date-detail-photo>.date-photo.large{height:auto;aspect-ratio:4/3;border-radius:inherit}
+.date-detail-photo img{object-fit:contain}
+.date-detail-photo>span:last-child{display:flex;align-items:center;justify-content:center;gap:7px;min-height:44px;color:#773759;background:#fff;font-family:inherit;font-size:12px;font-weight:600;line-height:1.5}
+.date-photo-overlay.app-overlay{padding:0;place-items:stretch;background:#17131b;z-index:500;backdrop-filter:none;-webkit-backdrop-filter:none;container-type:size;container-name:date-photo}
+.date-photo-viewer{display:flex;flex-direction:column;width:100%;height:100%;min-width:0;min-height:0;overflow:hidden;background:radial-gradient(ellipse at top,#352a38 0,#17131b 60%);color:#fff;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.date-photo-viewer button{border:1px solid #ffffff25;color:#fff;background:#ffffff0c;cursor:pointer;font:inherit;-webkit-tap-highlight-color:transparent}
+.date-photo-viewer button:disabled{opacity:.45;cursor:default}
+.date-photo-viewer button:focus-visible{outline:3px solid #f0b3d3;outline-offset:3px}
+.date-viewer-header{display:flex;align-items:center;gap:14px;padding:calc(12px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) 14px max(16px,env(safe-area-inset-left,0px));flex-shrink:0;direction:ltr}
+.date-viewer-header>button{flex-shrink:0;width:44px;height:44px;display:grid;place-items:center;border-radius:15px}
+.date-viewer-header>div{min-width:0;flex:1}
+.date-viewer-header span{font:650 9px/1.5 system-ui,sans-serif;letter-spacing:.13em;color:#e0b7cf}
+.date-viewer-header h2{font-family:inherit;font-size:16px;font-weight:600;line-height:1.5;margin:4px 0;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow-wrap:anywhere}
+.date-viewer-header time{font-size:11px;color:#d1c5d6}
+.date-viewer-stage{position:relative;flex:1;min-height:0;width:100%;overflow:hidden;overscroll-behavior:contain}
+.date-viewer-stage>img{position:absolute;inset:0;width:100%;height:100%;max-width:none;max-height:none;object-fit:contain;transform-origin:center;pointer-events:none;will-change:transform;transition:none}
+.date-viewer-loading{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:9px;pointer-events:none;font-size:12px;color:#e4d7e9}
+.date-viewer-retry{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);min-height:44px;padding:9px 18px;border-radius:13px}
+.date-viewer-status{flex-shrink:0;margin:0;padding:8px 18px;font-size:12px;line-height:1.6;text-align:center;color:#e5dae9;max-height:76px;overflow:auto}
+.date-viewer-status.is-error{color:#ffc6d6}
+.date-viewer-footer{flex-shrink:0;padding:12px max(16px,env(safe-area-inset-right,0px)) calc(14px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));border-top:1px solid #ffffff12;background:#ffffff04}
+.date-viewer-zoom{display:flex;align-items:center;justify-content:center;gap:7px;flex-wrap:wrap;direction:ltr;margin-bottom:12px}
+.date-viewer-zoom button{height:44px;min-width:44px;border-radius:13px;display:grid;place-items:center}
+.date-viewer-zoom button:nth-child(2){min-width:72px;font:500 12px/1.5 system-ui,sans-serif;font-variant-numeric:tabular-nums}
+.date-viewer-zoom>span{flex-basis:100%;font-size:10px;line-height:1.5;color:#d0c2d6;text-align:center;margin-top:3px}
+.date-viewer-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.date-viewer-actions button{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;border-radius:14px;padding:9px;font-size:12px;font-weight:600}
+.date-viewer-actions button:first-child{background:#efd9e7;color:#342136;border-color:#efd9e7}
+.date-viewer-actions svg{flex-shrink:0}
+html[dir=rtl] .date-viewer-header>div{text-align:right}
+html[dir=rtl] .date-viewer-header span{letter-spacing:0;font-family:inherit}
+html[lang=ar] .date-photo-viewer{font-family:"SF Arabic","Geeza Pro","Noto Naskh Arabic",Tahoma,system-ui,sans-serif}
+@media(min-width:900px){.date-viewer-header,.date-viewer-stage,.date-viewer-footer,.date-viewer-status{width:min(1100px,100%);margin-inline:auto}.date-viewer-actions{width:min(500px,100%);margin-inline:auto}}
+@media(max-height:480px){.date-viewer-header{padding-block:6px;gap:10px}.date-viewer-header h2{font-size:13px;-webkit-line-clamp:1}.date-viewer-header span{display:none}.date-viewer-footer{display:flex;align-items:center;gap:14px;padding-block:6px;padding-bottom:calc(6px + env(safe-area-inset-bottom,0px))}.date-viewer-zoom{flex:1;flex-wrap:nowrap;margin:0}.date-viewer-zoom>span{display:none}.date-viewer-actions{flex:1;margin:0}.date-viewer-actions button{min-height:44px;font-size:11px;gap:5px;padding:5px}.date-viewer-status{padding-block:4px;max-height:44px}}
+@container date-photo (max-height:480px){.date-viewer-header{padding-block:6px;gap:10px}.date-viewer-header h2{font-size:13px;-webkit-line-clamp:1}.date-viewer-header span{display:none}.date-viewer-footer{display:flex;align-items:center;gap:12px;padding-block:6px;padding-bottom:calc(6px + env(safe-area-inset-bottom,0px))}.date-viewer-zoom{flex:1;flex-wrap:nowrap;margin:0}.date-viewer-zoom>span{display:none}.date-viewer-actions{flex:1;margin:0}.date-viewer-actions button{min-height:44px;font-size:11px;gap:5px;padding:5px}.date-viewer-status{padding-block:4px;max-height:44px}}
+@media(prefers-reduced-motion:reduce){.dates-v36 .date-card-photo{transition:none}}
+html[data-reduce-motion=true] .dates-v36 .date-card-photo{transition:none}
